@@ -1,0 +1,168 @@
+/*FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+/* VARIABLES */
+:root {
+  --softBlue: hsl(215, 51%, 70%);
+  --cyan: hsla(178, 100%, 50%, 0.4);
+  --veryDarkBlue: hsl(217, 54%, 11%); /* (main BG) */
+  --veryDarkBlueCard: hsl(216, 50%, 16%); /* (card BG) */
+  --veryDarkBlueLine: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* RESET UNIVERSAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*=================================================================================*/
+
+/*============================= MOBILE FIRST DESING =============================*/
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  background-color: var(--veryDarkBlue);
+}
+
+.card {
+  height: 545px;
+  width: 330px;
+  background-color: var(--veryDarkBlueCard);
+  margin: 60px auto;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.product-image {
+  height: 280px;
+  width: 280px;
+  border-radius: 7px;
+  margin-bottom: 22px;
+  background-image: url(images/image-equilibrium.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.product-image-hover {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+  margin-bottom: 22px;
+  background-color: var(--cyan);
+  background-image: url(images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+}
+
+.product-image-hover:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 22px;
+  color: var(--white);
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+}
+
+h1:hover{
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+.description {
+  color: var(--softBlue);
+  font-size: 0.9em;
+  line-height: 25px;
+  margin-bottom: 18px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.value-container {
+  display: flex;
+  align-items: center;
+  color: var(--cyan);
+  font-weight: 500;
+}
+
+.value-container img {
+  margin-right: 6px;
+}
+
+.remainder-container {
+  display: flex;
+  align-items: center;
+  color: var(--softBlue);
+}
+
+.remainder-container img {
+  margin-right: 6px;
+}
+
+.line {
+  height: 1px;
+  background-color: var(--veryDarkBlueLine);
+  margin: 15px 0;
+}
+
+.creator-container {
+  display: flex;
+  align-items: center;
+  color: var(--softBlue);
+  font-size: 0.9em;
+}
+
+.creator-container p span {
+  color: var(--white);
+}
+
+.creator-container p span:hover {
+    cursor: pointer;
+    color: var(--cyan);
+  }
+
+.creator-container img {
+  height: 30px;
+  border: 1px var(--white) solid;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* ---- FOOTER ---- */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*=================================================================================*/
+/*                                RESPONSIVE DESING                                */
+/*=================================================================================*/
+
+/*============================= >= 1284px  ==================================*/
+
+@media only screen and (min-width: 1284px) {
+  .card {
+    height: 600px;
+    width: 350px;
+    margin: 148px auto 80px;
+  }
+  .product-image {
+    height: 306px;
+    width: 306px;
+  }
+}
