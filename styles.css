@@ -11,26 +11,25 @@
   --white: hsl(0, 0%, 100%);
 }
 
-/* RESET UNIVERSAL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Josh's Custom CSS Reset */
+@import "reset_styles.css";
 
 /*=================================================================================*/
 
 /*============================= MOBILE FIRST DESING =============================*/
 
-body {
-  font-family: "Outfit", sans-serif;
+html{
   font-size: 18px;
+}
+
+body {
+  font-family: "Outfit", sans-serif;  
   background-color: var(--veryDarkBlue);
 }
 
 .card {
-  height: 545px;
-  width: 330px;
+  height: 495px;
+  width: 280px;
   background-color: var(--veryDarkBlueCard);
   margin: 60px auto;
   border-radius: 12px;
@@ -42,15 +41,19 @@ body {
   width: 280px;
   border-radius: 7px;
   margin-bottom: 22px;
-  background-image: url(images/image-equilibrium.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   overflow: hidden;
+}
+
+.product-image img{
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .product-image-hover {
   height: 100%;
   width: 100%;
+  translate: 0 -280px;
   border-radius: 7px;
   margin-bottom: 22px;
   background-color: var(--cyan);
@@ -60,16 +63,20 @@ body {
   opacity: 0;
 }
 
-.product-image-hover:hover {
+.product-image:hover .product-image-hover{
   opacity: 1;
-  cursor: pointer;
+  cursor: pointer;  
+}
+
+.product-page{
+  text-decoration: none;
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 1.2rem;
   color: var(--white);
   letter-spacing: 1px;
-  margin-bottom: 22px;
+  margin-bottom: 15px;
 }
 
 h1:hover{
@@ -79,9 +86,9 @@ h1:hover{
 
 .description {
   color: var(--softBlue);
-  font-size: 0.9em;
+  font-size: 0.9rem;
   line-height: 25px;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .price-container {
@@ -120,17 +127,8 @@ h1:hover{
   display: flex;
   align-items: center;
   color: var(--softBlue);
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
-
-.creator-container p span {
-  color: var(--white);
-}
-
-.creator-container p span:hover {
-    cursor: pointer;
-    color: var(--cyan);
-  }
 
 .creator-container img {
   height: 30px;
@@ -139,9 +137,25 @@ h1:hover{
   margin-right: 15px;
 }
 
+.creator-container p{
+  margin: 0;
+}
+
+.creator-page {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.creator-page:hover {
+    cursor: pointer;
+    color: var(--cyan);
+  }
+
+
+
 /* ---- FOOTER ---- */
 .attribution {
-  font-size: 11px;
+  font-size: 0.5rem;
   text-align: center;
   color: white;
 }
@@ -157,8 +171,9 @@ h1:hover{
 
 @media only screen and (min-width: 1284px) {
   .card {
-    height: 600px;
-    width: 350px;
+    height: 525px;
+    width: 306px;
+    padding: 30px;
     margin: 148px auto 80px;
   }
   .product-image {
